@@ -31,7 +31,9 @@ function ProductDatail (){
         <div className="container mx-auto">
           {
             loading ?(
-            <h1 className="text-center text-3xl">Loading....</h1>
+              <div className="flex justify-center items-center">
+              <div className="w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-500"></div>
+            </div>
             ):
             notFound ?(
             <h1 className="text-center text-3xl">Product NotFound...</h1>

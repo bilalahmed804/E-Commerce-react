@@ -12,7 +12,6 @@ function Product(){
     const [chosenCategory , setChosenCategory] = useState("All")
 
   useEffect(()=>{
-    console.log("use Effect call");
     const url = chosenCategory === "All" ?
     "https://dummyjson.com/products":
     `https://dummyjson.com/products/category/${chosenCategory}`
@@ -46,10 +45,12 @@ function Product(){
     return(
        <div className="container mx-auto">
         {loading ?( 
-       <h1 className="text-center text-3xl">Loading....</h1>
+       <div className="flex justify-center items-center">
+  <div className="w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-500"></div>
+</div>
       ):(
         <div>
-          <Header/>
+          {/* <Header/> */}
           <div className="flex flex-wrap gap-2">
         <CategoryChip
         onClick={()=> setChosenCategory("All")}
